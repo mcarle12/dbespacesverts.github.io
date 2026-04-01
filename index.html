@@ -3,331 +3,265 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DB Espaces Verts — Entretien extérieur en Charente</title>
+<title>DB Espaces Verts — Entretien jardin & extérieur Angoulême, Charente</title>
+<meta name="description" content="DB Espaces Verts, entreprise d'entretien d'extérieur basée à Angoulême. Tonte, élagage, taille de haie, débroussaillage, nettoyage toiture en Charente. Devis gratuit, crédit d'impôt -50%, CESU+.">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --green: #2D6A2D;
-  --green-light: #4A9B3E;
-  --green-pale: #EAF3E5;
-  --yellow: #F5C842;
-  --dark: #1A2218;
-  --text: #3A3A3A;
-  --muted: #6B7568;
-  --white: #FFFFFF;
-  --cream: #F8FAF6;
-  --border: #D6E5D0;
-}
-html { scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--text); font-size: 15px; line-height: 1.6; }
-
-nav {
-  position: sticky; top: 0; z-index: 100;
-  background: var(--dark);
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 40px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
-}
-.nav-logo { display: flex; align-items: center; gap: 10px; }
-.nav-logo-icon { width: 36px; height: 36px; background: var(--green-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-.nav-logo-text { font-size: 17px; font-weight: 800; color: var(--white); }
-.nav-logo-text span { color: var(--yellow); }
-.nav-links { display: flex; gap: 28px; list-style: none; }
-.nav-links a { text-decoration: none; color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 500; transition: color 0.2s; }
-.nav-links a:hover { color: var(--yellow); }
-.nav-tel { background: var(--green-light); color: var(--white); padding: 9px 18px; border-radius: 4px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
-.nav-tel:hover { background: var(--yellow); color: var(--dark); }
-
-.hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; z-index: 0; background: var(--dark); }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.45; }
-.hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(26,34,24,0.92) 45%, rgba(45,106,45,0.35) 100%); }
-.hero-content { position: relative; z-index: 2; padding: 80px 40px 140px; max-width: 680px; }
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,200,66,0.15); border: 1px solid var(--yellow); color: var(--yellow); font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 24px; letter-spacing: 0.5px; text-transform: uppercase; }
-.hero h1 { font-size: clamp(36px, 5vw, 62px); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
-.hero h1 em { font-style: italic; font-family: 'Lora', serif; color: var(--yellow); font-weight: 400; }
-.hero-sub { color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.8; margin-bottom: 36px; max-width: 500px; }
-.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--yellow); color: var(--dark); padding: 15px 30px; border-radius: 4px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 14px rgba(245,200,66,0.3); }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(245,200,66,0.4); }
-.btn-ghost { display: inline-flex; align-items: center; gap: 8px; border: 2px solid rgba(255,255,255,0.5); color: var(--white); padding: 13px 28px; border-radius: 4px; font-size: 14px; font-weight: 600; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
-.btn-ghost:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
-.hero-stats { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; display: flex; background: rgba(45,106,45,0.95); }
-.hero-stat { flex: 1; padding: 20px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.12); }
-.hero-stat:last-child { border-right: none; }
-.stat-num { font-size: 22px; font-weight: 800; color: var(--yellow); }
-.stat-label { font-size: 11px; color: rgba(255,255,255,0.7); font-weight: 500; margin-top: 2px; }
-
-.avantages { display: flex; background: var(--dark); }
-.avantage { flex: 1; padding: 28px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); transition: background 0.2s; }
-.avantage:last-child { border-right: none; }
-.avantage:hover { background: rgba(255,255,255,0.04); }
-.avantage-icon { font-size: 24px; margin-bottom: 8px; }
-.avantage-title { font-size: 12px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-.avantage-text { font-size: 11px; color: rgba(255,255,255,0.5); }
-
-.section { padding: 80px 40px; }
-.section-tag { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--green-light); font-weight: 600; margin-bottom: 10px; }
-.section-title { font-size: clamp(26px, 3vw, 40px); font-weight: 800; color: var(--dark); margin-bottom: 16px; line-height: 1.2; }
-.section-title em { font-style: italic; font-family: 'Lora', serif; color: var(--green); font-weight: 400; }
-.section-sub { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.8; margin-bottom: 48px; }
-
-.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.service-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
-.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(45,106,45,0.12); }
-.service-img { width: 100%; height: 160px; object-fit: cover; display: block; }
-.service-placeholder { width: 100%; height: 160px; background: var(--green-pale); display: flex; align-items: center; justify-content: center; font-size: 40px; }
-.service-body { padding: 18px 16px; }
-.service-num { font-size: 10px; letter-spacing: 2px; color: var(--green-light); font-weight: 600; text-transform: uppercase; margin-bottom: 6px; }
-.service-name { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
-.service-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
-
-.zone-section { background: var(--green); color: var(--white); padding: 72px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.zone-left h2 { font-size: 34px; font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
-.zone-left h2 em { font-style: italic; font-family: 'Lora', serif; font-weight: 400; color: var(--yellow); }
-.zone-left p { color: rgba(255,255,255,0.75); font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
-.zone-img { width: 100%; border-radius: 8px; height: 300px; object-fit: cover; display: block; }
-.aides-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.aide-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 18px 16px; }
-.aide-icon { font-size: 22px; margin-bottom: 8px; }
-.aide-title { font-size: 13px; font-weight: 700; color: var(--yellow); margin-bottom: 4px; }
-.aide-text { font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.5; }
-
-.gallery-section { padding: 80px 40px; }
-.gallery-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 220px 220px; gap: 10px; border-radius: 10px; overflow: hidden; }
-.gallery-item { overflow: hidden; position: relative; background: var(--green-pale); }
-.gallery-item.big { grid-row: span 2; }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; display: block; }
-.gallery-item:hover img { transform: scale(1.05); }
-.gallery-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
-.gallery-placeholder span.icon { font-size: 40px; }
-.gallery-placeholder span.label { font-size: 10px; font-weight: 600; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
-
-.reseaux-section { padding: 48px 40px; background: var(--dark); text-align: center; }
-.reseaux-section h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-.reseaux-section p { color: rgba(255,255,255,0.5); font-size: 13px; margin-bottom: 28px; }
-.reseaux-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-.reseau-btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 28px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; transition: transform 0.15s, opacity 0.2s; }
-.reseau-btn:hover { transform: translateY(-2px); opacity: 0.9; }
-.reseau-btn.insta { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }
-.reseau-btn.fb { background: #1877F2; color: #fff; }
-.reseau-btn.tiktok { background: #010101; color: #fff; border: 1px solid #444; }
-
-.contact-section { display: grid; grid-template-columns: 1fr 1fr; }
-.contact-left { background: var(--green-pale); padding: 72px 48px; }
-.contact-right { background: var(--yellow); padding: 72px 48px; display: flex; flex-direction: column; justify-content: center; }
-.contact-left h2 { font-size: 30px; font-weight: 800; color: var(--dark); margin-bottom: 36px; }
-.contact-left h2 em { font-style: italic; font-family: 'Lora', serif; color: var(--green); font-weight: 400; }
-.contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
-.contact-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
-.contact-label { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
-.contact-value { font-size: 15px; font-weight: 600; color: var(--dark); }
-.contact-value a { color: var(--dark); text-decoration: none; }
-.contact-value a:hover { color: var(--green); }
-.contact-right h3 { font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 14px; line-height: 1.25; }
-.contact-right p { font-size: 14px; color: rgba(26,34,24,0.65); margin-bottom: 16px; line-height: 1.7; }
-.btn-dark { display: inline-flex; align-items: center; gap: 8px; background: var(--dark); color: var(--white); padding: 15px 32px; border-radius: 4px; font-size: 14px; font-weight: 700; text-decoration: none; margin-top: 8px; transition: opacity 0.2s, transform 0.15s; }
-.btn-dark:hover { opacity: 0.85; transform: translateY(-2px); }
-
-footer { background: var(--dark); color: rgba(255,255,255,0.4); display: flex; justify-content: space-between; align-items: center; padding: 22px 40px; font-size: 12px; flex-wrap: wrap; gap: 10px; border-top: 1px solid rgba(255,255,255,0.06); }
-footer strong { color: rgba(255,255,255,0.7); }
-footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
-
-@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
-.hero-badge { animation: fadeUp 0.5s ease both; }
-.hero h1 { animation: fadeUp 0.6s 0.1s ease both; }
-.hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
-.hero-btns { animation: fadeUp 0.6s 0.3s ease both; }
-
-@media (max-width: 768px) {
-  nav { padding: 12px 18px; }
-  .nav-links { display: none; }
-  .hero-content { padding: 60px 20px 140px; }
-  .hero-stats { flex-wrap: wrap; }
-  .hero-stat { min-width: 50%; }
-  .avantages { flex-wrap: wrap; }
-  .avantage { min-width: 50%; }
-  .section { padding: 52px 20px; }
-  .services-grid { grid-template-columns: 1fr 1fr; }
-  .zone-section { grid-template-columns: 1fr; padding: 52px 20px; gap: 36px; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 160px 160px 160px; }
-  .gallery-item.big { grid-row: span 1; }
-  .contact-section { grid-template-columns: 1fr; }
-  .contact-left, .contact-right { padding: 48px 24px; }
-  .reseaux-links { flex-direction: column; align-items: center; }
-  footer { padding: 18px; flex-direction: column; text-align: center; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo">
-    <img src="logo.png" alt="DB Espaces Verts
-    <div class="nav-logo-text"><span>DB</span> Espaces Verts</div>
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" onclick="if(event.target===this)closeSearch()">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Rechercher une prestation..." onkeydown="if(event.key==='Escape')closeSearch()">
+    <button onclick="doSearch()">Rechercher</button>
   </div>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#zone">Zone</a></li>
-    <li><a href="#photos">Réalisations</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a class="nav-tel" href="tel:0677025502">📞 06 77 02 55 02</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.png" alt="DB Espaces Verts"></a>
+  <div class="nav-center">
+    <a href="#prestations" class="active">Prestations</a>
+    <a href="#pourquoi">Pourquoi nous</a>
+    <a href="#realisations">Nos réalisations</a>
+    <a href="#avis">Avis clients</a>
+    <a href="#apropos">À propos</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a href="https://www.facebook.com/61578576101390/" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/dbespacesverts/" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@dbespacesverts" target="_blank" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+      </a>
+    </div>
+    <button class="nav-search" onclick="openSearch()" aria-label="Rechercher">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <a class="btn-devis" href="#contact">Demande de devis</a>
+  </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80" alt="Jardin entretenu">
-  </div>
+  <div class="hero-bg"><img src="photo-debroussaillage.png" alt="Entretien espaces verts Charente"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">📍 Angoulême — Charente (16)</div>
     <h1>Votre extérieur,<br><em>magnifié</em> avec soin.</h1>
-    <p class="hero-sub">DB Espaces Verts prend en charge l'entretien complet de vos jardins et extérieurs. Tonte, élagage, nettoyage — on s'occupe de tout, sur toute la Charente.</p>
+    <p class="hero-sub">Tonte, élagage, nettoyage... DB Espaces Verts prend en charge l'entretien complet de vos jardins et extérieurs pour particuliers, professionnels et copropriétés sur toute la Charente.</p>
     <div class="hero-btns">
-      <a class="btn-primary" href="tel:0677025502">📞 Devis gratuit</a>
-      <a class="btn-ghost" href="#services">Voir nos services</a>
+      <a class="btn-primary" href="#contact">Devis gratuit</a>
+      <a class="btn-outline-white" href="#prestations">Voir nos prestations</a>
     </div>
   </div>
   <div class="hero-stats">
     <div class="hero-stat"><div class="stat-num">Gratuit</div><div class="stat-label">Devis sans engagement</div></div>
     <div class="hero-stat"><div class="stat-num">-50%</div><div class="stat-label">Crédit d'impôt</div></div>
-    <div class="hero-stat"><div class="stat-num">CESU</div><div class="stat-label">Chèque emploi accepté</div></div>
+    <div class="hero-stat"><div class="stat-num">CESU+</div><div class="stat-label">Particulier employeur / salarié</div></div>
     <div class="hero-stat"><div class="stat-num">Charente</div><div class="stat-label">Zone d'intervention</div></div>
   </div>
 </section>
 
-<div class="avantages">
-  <div class="avantage"><div class="avantage-icon">⚡</div><div class="avantage-title">Intervention rapide</div><div class="avantage-text">Réactivité sur toute la Charente</div></div>
-  <div class="avantage"><div class="avantage-icon">🎁</div><div class="avantage-title">Devis 100% gratuit</div><div class="avantage-text">Sans engagement, sans frais</div></div>
-  <div class="avantage"><div class="avantage-icon">💳</div><div class="avantage-title">CESU accepté</div><div class="avantage-text">Chèque emploi service universel</div></div>
-  <div class="avantage"><div class="avantage-icon">🏛️</div><div class="avantage-title">Crédit d'impôt -50%</div><div class="avantage-text">Éligible services à domicile</div></div>
-</div>
-
-<section class="section" id="services">
+<!-- PRESTATIONS -->
+<section class="section" id="prestations">
   <div class="section-tag">Nos prestations</div>
   <h2 class="section-title">Tous vos travaux<br><em>d'extérieur</em></h2>
   <p class="section-sub">Du jardin d'agrément à l'entretien courant, DB Espaces Verts intervient pour tous vos besoins extérieurs en Charente.</p>
-  <div class="services-grid">
+  <div class="prestations-grid">
 
-    <div class="service-card">
-      <img class="service-img" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=75" alt="Tonte pelouse" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="service-placeholder" style="display:none">🌿</div>
-      <div class="service-body"><div class="service-num">01</div><div class="service-name">Tonte de pelouse</div><div class="service-desc">Entretien régulier de votre gazon pour un jardin toujours impeccable.</div></div>
-    </div>
+    <a class="prestation-card" href="tonte-pelouse.html">
+      <img class="prestation-img" src="photo-tonte.png" alt="Tonte de pelouse Angoulême">
+      <div class="prestation-body">
+        <div class="prestation-num">01</div>
+        <div class="prestation-name">Tonte de pelouse</div>
+        <div class="prestation-desc">Entretien régulier de votre gazon pour un jardin toujours impeccable.</div>
+        <div class="prestation-link">En savoir plus →</div>
+      </div>
+    </a>
 
-    <div class="service-card">
-      <img class="service-img" src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d9c?w=400&q=75" alt="Débroussaillage" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="service-placeholder" style="display:none">🌾</div>
-      <div class="service-body"><div class="service-num">02</div><div class="service-name">Débroussaillage</div><div class="service-desc">Élimination des broussailles, ronces et végétation envahissante.</div></div>
-    </div>
+    <a class="prestation-card" href="debroussaillage.html">
+      <img class="prestation-img" src="photo-debroussaillage.png" alt="Débroussaillage Charente">
+      <div class="prestation-body">
+        <div class="prestation-num">02</div>
+        <div class="prestation-name">Débroussaillage</div>
+        <div class="prestation-desc">Élimination des broussailles, ronces et végétation envahissante.</div>
+        <div class="prestation-link">En savoir plus →</div>
+      </div>
+    </a>
 
-    <div class="service-card">
-      <img class="service-img" src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400&q=75" alt="Taille haie" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="service-placeholder" style="display:none">✂️</div>
-      <div class="service-body"><div class="service-num">03</div><div class="service-name">Taille haie & arbres</div><div class="service-desc">Façonnage précis de vos haies et arbres pour une silhouette parfaite.</div></div>
-    </div>
+    <a class="prestation-card" href="taille-haie-arbres.html">
+      <img class="prestation-img" src="photo-taille-haie.png" alt="Taille de haie Angoulême">
+      <div class="prestation-body">
+        <div class="prestation-num">03</div>
+        <div class="prestation-name">Taille haie & arbres</div>
+        <div class="prestation-desc">Façonnage précis de vos haies et arbres pour une silhouette parfaite.</div>
+        <div class="prestation-link">En savoir plus →</div>
+      </div>
+    </a>
 
-    <div class="service-card">
-      <img class="service-img" src="https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?w=400&q=75" alt="Élagage" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="service-placeholder" style="display:none">🪓</div>
-      <div class="service-body"><div class="service-num">04</div><div class="service-name">Élagage</div><div class="service-desc">Élagage professionnel en sécurité pour la santé de vos grands arbres.</div></div>
-    </div>
+    <a class="prestation-card" href="elagage.html">
+      <img class="prestation-img" src="photo-elagage.png" alt="Élagage arbres Charente">
+      <div class="prestation-body">
+        <div class="prestation-num">04</div>
+        <div class="prestation-name">Élagage</div>
+        <div class="prestation-desc">Élagage professionnel en sécurité pour la santé de vos grands arbres.</div>
+        <div class="prestation-link">En savoir plus →</div>
+      </div>
+    </a>
 
-    <div class="service-card">
-      <img class="service-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=75" alt="Désherbage" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="service-placeholder" style="display:none">🌱</div>
-      <div class="service-body"><div class="service-num">05</div><div class="service-name">Désherbage</div><div class="service-desc">Traitement des mauvaises herbes sur allées, terrasses et massifs.</div></div>
-    </div>
+    <a class="prestation-card" href="desherbage.html">
+      <img class="prestation-img" src="photo-desherbage.png" alt="Désherbage Angoulême">
+      <div class="prestation-body">
+        <div class="prestation-num">05</div>
+        <div class="prestation-name">Désherbage</div>
+        <div class="prestation-desc">Traitement des mauvaises herbes sur allées, terrasses et massifs.</div>
+        <div class="prestation-link">En savoir plus →</div>
+      </div>
+    </a>
 
-    <div class="service-card">
-      <img class="service-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=75" alt="Nettoyage toiture" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="service-placeholder" style="display:none">🏠</div>
-      <div class="service-body"><div class="service-num">06</div><div class="service-name">Nettoyage toiture</div><div class="service-desc">Démoussage et nettoyage de toiture pour protéger votre habitat.</div></div>
-    </div>
+    <a class="prestation-card" href="nettoyage-toiture.html">
+      <img class="prestation-img" src="photo-nettoyage-toiture.png" alt="Nettoyage toiture Charente">
+      <div class="prestation-body">
+        <div class="prestation-num">06</div>
+        <div class="prestation-name">Nettoyage toiture</div>
+        <div class="prestation-desc">Démoussage et nettoyage de toiture pour protéger votre habitat.</div>
+        <div class="prestation-link">En savoir plus →</div>
+      </div>
+    </a>
 
-    <div class="service-card">
-      <img class="service-img" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=75" alt="Haute pression" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="service-placeholder" style="display:none">💧</div>
-      <div class="service-body"><div class="service-num">07</div><div class="service-name">Haute pression</div><div class="service-desc">Nettoyage terrasses, allées, façades et clôtures au karcher.</div></div>
-    </div>
+    <a class="prestation-card" href="nettoyage-haute-pression.html">
+      <img class="prestation-img" src="photo-haute-pression.png" alt="Nettoyage haute pression Angoulême">
+      <div class="prestation-body">
+        <div class="prestation-num">07</div>
+        <div class="prestation-name">Haute pression</div>
+        <div class="prestation-desc">Nettoyage terrasses, allées, façades et clôtures au karcher.</div>
+        <div class="prestation-link">En savoir plus →</div>
+      </div>
+    </a>
 
-    <div class="service-card" style="background:var(--green);border-color:var(--green);">
-      <div class="service-placeholder" style="background:rgba(255,255,255,0.08);flex-direction:column;gap:6px;">
+    <div class="prestation-card" style="background:var(--green);border-color:var(--green);cursor:default;">
+      <div class="prestation-img" style="background:rgba(255,255,255,0.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
         <span style="font-size:36px;">📞</span>
         <span style="font-size:12px;color:rgba(255,255,255,0.7);font-weight:600;">Un autre besoin ?</span>
       </div>
-      <div class="service-body" style="background:var(--green);">
-        <div class="service-name" style="color:var(--white);">Devis personnalisé</div>
-        <div class="service-desc" style="color:rgba(255,255,255,0.65);">Nous nous adaptons à tous vos projets d'extérieur.</div>
+      <div class="prestation-body" style="background:var(--green);">
+        <div class="prestation-name" style="color:var(--white);">Devis personnalisé</div>
+        <div class="prestation-desc" style="color:rgba(255,255,255,0.65);">Nous nous adaptons à tous vos projets d'extérieur.</div>
+        <a class="prestation-link" href="#contact" style="color:var(--beige);">Nous contacter →</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="zone-section" id="zone">
-  <div class="zone-left">
-    <div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--yellow);font-weight:600;margin-bottom:10px;">Zone d'intervention</div>
-    <h2>Basé à <em>Angoulême</em>, on vient chez vous en Charente.</h2>
-    <p>DB Espaces Verts se déplace sur l'ensemble du département de la Charente (16). Particuliers, professionnels, copropriétés — nous intervenons partout.</p>
-    <div class="aides-grid">
-      <div class="aide-card"><div class="aide-icon">🏛️</div><div class="aide-title">Crédit d'impôt -50%</div><div class="aide-text">Éligible aux services à la personne. Récupérez 50% du montant sur vos impôts.</div></div>
-      <div class="aide-card"><div class="aide-icon">💳</div><div class="aide-title">CESU accepté</div><div class="aide-text">Nous acceptons le Chèque Emploi Service Universel pour simplifier vos démarches.</div></div>
-      <div class="aide-card"><div class="aide-icon">🎁</div><div class="aide-title">Devis gratuit</div><div class="aide-text">Estimation sur place, sans frais ni engagement. On se déplace pour vous.</div></div>
-      <div class="aide-card"><div class="aide-icon">⚡</div><div class="aide-title">Intervention rapide</div><div class="aide-text">Disponibles rapidement pour vos urgences et travaux planifiés.</div></div>
+<!-- POURQUOI NOUS -->
+<section class="pourquoi-section" id="pourquoi">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--beige);opacity:0.6;font-weight:600;margin-bottom:10px;">Nos engagements</div>
+    <h2 style="font-size:clamp(26px,3vw,40px);font-weight:800;color:var(--white);line-height:1.2;">Pourquoi choisir<br><em style="font-style:italic;font-family:'Lora',serif;color:var(--beige);font-weight:400;">DB Espaces Verts ?</em></h2>
+    <div class="pourquoi-grid">
+      <div class="pourquoi-card">
+        <div class="pourquoi-icon">📍</div>
+        <div class="pourquoi-title">Proximité</div>
+        <div class="pourquoi-text">Basé à Angoulême, nous intervenons rapidement sur toute la Charente. Pas de délais interminables — on est près de chez vous.</div>
+      </div>
+      <div class="pourquoi-card">
+        <div class="pourquoi-icon">🤝</div>
+        <div class="pourquoi-title">Relation de confiance</div>
+        <div class="pourquoi-text">Nous privilégions le contact direct et la transparence. Devis clair, communication honnête, résultat à la hauteur de vos attentes.</div>
+      </div>
+      <div class="pourquoi-card">
+        <div class="pourquoi-icon">🔧</div>
+        <div class="pourquoi-title">Adaptabilité</div>
+        <div class="pourquoi-text">Chaque chantier est unique. Nous adaptons nos méthodes et notre planning à vos besoins, qu'il s'agisse d'un entretien régulier ou d'une intervention ponctuelle.</div>
+      </div>
+      <div class="pourquoi-card">
+        <div class="pourquoi-icon">🏛️</div>
+        <div class="pourquoi-title">Crédit d'impôt -50%</div>
+        <div class="pourquoi-text">En tant que service à la personne, nos prestations ouvrent droit à un crédit d'impôt de 50% pour les particuliers. On vous accompagne dans les démarches.</div>
+      </div>
+      <div class="pourquoi-card">
+        <div class="pourquoi-icon">💳</div>
+        <div class="pourquoi-title">CESU+</div>
+        <div class="pourquoi-text">Nous acceptons le CESU+ (Chèque Emploi Service Universel) pour simplifier vos démarches en tant que particulier employeur ou salarié.</div>
+      </div>
+      <div class="pourquoi-card">
+        <div class="pourquoi-icon">⚡</div>
+        <div class="pourquoi-title">Intervention rapide</div>
+        <div class="pourquoi-text">Devis gratuit sur place, réponse rapide, planification flexible. Votre temps est précieux — nous en prenons soin.</div>
+      </div>
     </div>
-  </div>
-  <div>
-    <img class="zone-img" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80" alt="Charente nature" onerror="this.style.display='none'">
   </div>
 </section>
 
-<section class="gallery-section" id="photos">
+<!-- AVANT / APRÈS -->
+<section class="avantapres-section" id="realisations">
   <div class="section-tag">Nos réalisations</div>
-  <h2 class="section-title">Le travail<br><em>parle de lui-même</em></h2>
-  <p class="section-sub" style="margin-bottom:28px;">Quelques exemples de nos interventions en Charente. Remplacez ces photos par vos propres réalisations !</p>
-  <div class="gallery-grid">
-    <div class="gallery-item big">
-      <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d9c?w=700&q=80" alt="Jardin entretenu" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="gallery-placeholder" style="display:none"><span class="icon">🌿</span><span class="label">Votre photo</span></div>
+  <h2 class="section-title">Avant / <em>Après</em></h2>
+  <p class="section-sub" style="margin-bottom:28px;">Quelques exemples concrets de nos interventions en Charente.</p>
+  <div class="avantapres-grid">
+    <div class="aa-item">
+      <img src="avant1.jpg" alt="Avant taille de haie">
+      <div class="aa-label">Avant</div>
     </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400&q=80" alt="Taille haie" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="gallery-placeholder" style="display:none"><span class="icon">✂️</span><span class="label">Votre photo</span></div>
+    <div class="aa-item">
+      <img src="apres1.jpg" alt="Après taille de haie">
+      <div class="aa-label apres">Après</div>
     </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=80" alt="Haute pression" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="gallery-placeholder" style="display:none"><span class="icon">💧</span><span class="label">Votre photo</span></div>
+    <div class="aa-item">
+      <img src="avant2.jpg" alt="Avant élagage">
+      <div class="aa-label">Avant</div>
     </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" alt="Toiture" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="gallery-placeholder" style="display:none"><span class="icon">🏠</span><span class="label">Votre photo</span></div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?w=400&q=80" alt="Élagage" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="gallery-placeholder" style="display:none"><span class="icon">🪓</span><span class="label">Votre photo</span></div>
+    <div class="aa-item">
+      <img src="apres2.jpg" alt="Après élagage">
+      <div class="aa-label apres">Après</div>
     </div>
   </div>
 </section>
 
-<div class="reseaux-section">
-  <h3>Suivez DB Espaces Verts</h3>
-  <p>Retrouvez nos réalisations et actualités sur les réseaux sociaux</p>
-  <div class="reseaux-links">
-    <a class="reseau-btn insta" href="https://instagram.com/dbespacesverts" target="_blank">
-      📸 Instagram
-    </a>
-    <a class="reseau-btn fb" href="https://facebook.com/dbespacesverts" target="_blank">
-      📘 Facebook
-    </a>
-    <a class="reseau-btn tiktok" href="https://tiktok.com/@dbespacesverts" target="_blank">
-      🎵 TikTok
-    </a>
+<!-- AVIS CLIENTS -->
+<section class="avis-section" id="avis">
+  <div class="section-tag">Témoignages</div>
+  <h2 class="section-title">Avis de nos <em>clients</em></h2>
+  <div class="avis-grid">
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <div class="avis-text">« Un travail rapide et impeccable, je recommande ! »</div>
+      <div class="avis-author">— Pascal</div>
+    </div>
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <div class="avis-text">« Très professionnel, résultat parfait. »</div>
+      <div class="avis-author">— Martine</div>
+    </div>
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <div class="avis-text">« Jardin métamorphosé, merci ! »</div>
+      <div class="avis-author">— Chloé</div>
+    </div>
   </div>
-</div>
+</section>
 
+<!-- À PROPOS -->
+<section class="apropos-section" id="apropos">
+  <img class="apropos-img" src="photo-profil.png" alt="DB Espaces Verts — Angoulême">
+  <div class="apropos-right">
+    <div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--green-light);font-weight:600;margin-bottom:10px;">À propos</div>
+    <h2>À propos de<br><em>DB Espaces Verts</em></h2>
+    <p>Basé à Angoulême et passionné par les espaces verts, DB Espaces Verts vous accompagne dans l'entretien et l'embellissement de vos extérieurs avec sérieux et réactivité.</p>
+    <p>Que vous soyez particulier, professionnel ou copropriété, nous intervenons sur toute la Charente avec le même engagement : un travail soigné, une relation de proximité et une vraie écoute de vos besoins.</p>
+    <p>Notre priorité, c'est votre satisfaction — et la durabilité de votre espace vert.</p>
+    <a class="btn-green" href="#contact" style="margin-top:8px;">Nous contacter</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="contact-left">
     <h2>Contactez<br><em>DB Espaces Verts</em></h2>
@@ -344,15 +278,15 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
       <div><div class="contact-label">Zone d'intervention</div><div class="contact-value">Angoulême & toute la Charente (16)</div></div>
     </div>
     <div class="contact-item">
-      <div class="contact-icon">🕐</div>
-      <div><div class="contact-label">Disponibilité</div><div class="contact-value">Lun–Sam · Réponse rapide</div></div>
+      <div class="contact-icon">💳</div>
+      <div><div class="contact-label">CESU+</div><div class="contact-value">Particulier employeur / salarié</div></div>
     </div>
   </div>
   <div class="contact-right">
     <h3>Devis gratuit & sans engagement</h3>
     <p>Un simple appel suffit. Nous nous déplaçons chez vous pour évaluer vos besoins et vous remettre un devis clair, gratuit et sans obligation.</p>
-    <p style="font-size:13px;color:rgba(26,34,24,0.55);">💡 Profitez du crédit d'impôt de 50% — on vous explique comment en bénéficier.</p>
-    <a class="btn-dark" href="tel:0677025502">📞 Appeler maintenant</a>
+    <p style="font-size:13px;">💡 Profitez du crédit d'impôt de 50% — on vous explique comment en bénéficier.</p>
+    <a class="btn-green" href="tel:0677025502">📞 Appeler maintenant</a>
   </div>
 </section>
 
@@ -361,5 +295,23 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
   <div>Angoulême (16) · <a href="tel:0677025502">06 77 02 55 02</a> · <a href="mailto:dbespacesverts@gmail.com">dbespacesverts@gmail.com</a></div>
 </footer>
 
+<script>
+function openSearch(){ document.getElementById('searchOverlay').classList.add('open'); setTimeout(()=>document.getElementById('searchInput').focus(),100); }
+function closeSearch(){ document.getElementById('searchOverlay').classList.remove('open'); }
+function doSearch(){
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const pages = {
+    'tonte':['tonte-pelouse.html'],'pelouse':['tonte-pelouse.html'],
+    'débroussaillage':['debroussaillage.html'],'broussailles':['debroussaillage.html'],
+    'haie':['taille-haie-arbres.html'],'taille':['taille-haie-arbres.html'],
+    'élagage':['elagage.html'],'arbre':['elagage.html'],
+    'désherbage':['desherbage.html'],'herbe':['desherbage.html'],
+    'toiture':['nettoyage-toiture.html'],'mousse':['nettoyage-toiture.html'],
+    'pression':['nettoyage-haute-pression.html'],'karcher':['nettoyage-haute-pression.html'],
+  };
+  for(const [key, val] of Object.entries(pages)){ if(q.includes(key)){ window.location.href=val[0]; return; } }
+  alert('Aucun résultat trouvé pour "'+q+'"');
+}
+</script>
 </body>
 </html>
